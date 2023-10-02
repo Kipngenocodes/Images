@@ -3,7 +3,6 @@ from PIL import ImageTk, Image
 
 root = Tk()
 root.title("Using Images with the Word")
-root.iconbitmap("image.ico")
 
 image_one = ImageTk.PhotoImage(Image.open("image.png"))
 image_two = ImageTk.PhotoImage(Image.open("hopsin1.png"))
@@ -25,13 +24,33 @@ def forward(image_number):
 
     mylabel.grid_forget()
     mylabel = Label(Image=image_list[image_number - 1])
+    button_forward = Button(root, text=">>", command=lambda: forward(image_number + 1))
+    button_back = Button(root, text="<<", command=lambda: back(image_number - 1))
+
+    if image_number == 5:
+        button_forward = Button(root, text=">>", state=DISABLED)
+
     mylabel.grid(row=0, column=0, columnspan=3)
+    button_back.grid(row=1, column=0)
+    button_forward.grid(row=1, column=2)
 
 
-def back():
+def back(image_number):
     global mylabel
     global button_back
     global button_forward
+
+    mylabel.grid_forget()
+    mylabel = Label(Image=image_list[image_number - 1])
+    button_forward = Button(root, text=">>", command=lambda: forward(image_number + 1))
+    button_back = Button(root, text="<<", command=lambda: back(image_number - 1))
+
+    if image_number == 5:
+        button_back = Button(root, text="<<", state=DISABLED)
+
+    mylabel.grid(row=0, column=0, columnspan=3)
+    button_back.grid(row=1, column=0)
+    button_forward.grid(row=1, column=2)
 
 
 button_back = Button(root, text="<<", command=back)
