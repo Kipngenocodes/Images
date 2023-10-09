@@ -16,9 +16,11 @@ Contact_Label = Label(root, text="Contacts.")
 first_name_entry = Entry(root, width=40, borderwidth=0)
 last_name_entry = Entry(root, width=40, borderwidth=0)
 email_label_entry = Entry(root, width=40, borderwidth=0)
-year_of_birth_entry = Entry(root, width=40, borderwidth=0, show="#")
+year_of_birth_entry = Entry(root, width=40, borderwidth=0, show="# ")
 county_entry = Entry(root, width=20, borderwidth=0)
 Contact_entry = Entry(root, width=30, borderwidth=0)
+
+status_bar= Label(root, text="Thank you for Visiting our Page",bd=2, relief=SUNKEN, anchor=W)
 
 # Creating the grid for each label and entry boxes
 first_namelabel.grid(row=0, column=0)
@@ -44,5 +46,6 @@ company_label =Label(text="In case of of any problem kindly reach: www.websterso
 
 Welcoming_Label.grid(row=20, column=1)
 company_label.grid(row=21, column=1)
+status_bar.grid(row=23, column =1, columnspan=4, sticky=W+E)
 
 root.mainloop()
