@@ -5,8 +5,14 @@ root = Tk()
 root.title("Working with MessageBox")
 
 
+# messagebox.showinfo()
+# messagebox.askyesno()
+# messagebox.askquestion()
+# messagebox.showerror()
+# messagebox.showinfo()
+# messagebox.askokcancel()
 def popup():
-    messagebox.showinfo("This is my message", "Hello World!")
+    messagebox.showerror("An error occured", "Hello World!")
 
 
 Button(root, text="Popup", command=popup).pack()
