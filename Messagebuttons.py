@@ -12,7 +12,7 @@ root.title("Working with MessageBox")
 # messagebox.showinfo()
 # messagebox.askokcancel()
 def popup():
-    messagebox.showerror("An error occured", "Hello World!")
+    messagebox.askquestion("Are you Okay", "Be okay!")
 
 
 Button(root, text="Popup", command=popup).pack()
