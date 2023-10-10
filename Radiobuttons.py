@@ -24,15 +24,15 @@ capital =StringVar()
 capital.set("Nairobi")
 
 for country, city in Capital_cities:
-    Radiobutton(root, text=country, variable=capital, value=city).pack()
+    Radiobutton(root, text=country, variable=capital, value=city).pack(anchor=W)
 
 # Radiobutton(root, text="Option 1", variable=r, value=1, command=lambda: Clicked(r.get())).pack()
 # Radiobutton(root, text="Option 2", variable=r, value=2, command=lambda: Clicked(r.get())).pack()
 
-myLabel = Label(root, text=capital.get())
-myLabel.pack()
+# myLabel = Label(root, text=capital.get())
+# myLabel.pack()
 
-mybutton = Button(root, text="Clicked here", command=lambda: Clicked(capital.get()))
-mybutton.pack()
+mybutton = Button(root, text="Clicked here", padx=10, pady=20, bg= "red", command=lambda: Clicked(capital.get()))
+mybutton.pack(anchor=W)
 
 root.mainloop()
