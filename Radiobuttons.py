@@ -8,7 +8,7 @@ r = IntVar()
 
 
 # r.set("2")
-def Clicked(value):
+def Clicked(value:None):
     myLabel = Label(root, text=value)
     myLabel.pack()
 
