@@ -111,7 +111,7 @@ def credit_card(do_validation=None, do_validations_date=None, do_validations_cvv
         if value.isdigit():
             return value
         else:
-            messagebox.showerror("Error", "Invalid CVV entered")
+            messagebox.showerror("Error", "Invalid CVV entered, numbers only")
 
     enter_button = Button(top, text="Enter")
     enter_button.grid(row=5, column=3)
