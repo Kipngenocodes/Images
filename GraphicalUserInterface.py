@@ -50,18 +50,15 @@ details"""
 
 Amount_entry = Entry(root, background="yellow")
 Amount_entry.grid(row=5, column=2)
-class Credit(Toplevel):
-    def __init__(self, root=None):
-        super().__init__(root=root)
-        self.title("Credit Card Details")
-        self.geometry("400x300")
+def yes_button_clicked():
 
-        label = Label(self, text="Credit Card Details")
-        label.pack()
+    buttonclicked = Toplevel()
+    buttonclicked.title("Credit Card")
+    buttonclicked.geometry("400x400")
 
 
 # Binding the Yes Button in Credit Button with new page to enter information
-Credit_entry_button_yes = Button(root, text="Yes", bg="yellow", command=Credit)
+Credit_entry_button_yes = Button(root, text="Yes", bg="yellow", command=yes_button_clicked)
 Credit_entry_button_yes.grid(row=6, column=2)
 
 Credit_entry_button_no = Button(root, text="no", bg="yellow")
